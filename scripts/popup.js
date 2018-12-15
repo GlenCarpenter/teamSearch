@@ -16,10 +16,10 @@ let dlrTreeUrl = "http://dummyaddress1.com&q=";
 let ncObjUrl = "http://dummyaddress1.com&q=";
 
 // Event listeners
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 	var linkQuery = document.getElementById('query');
     // execute list search on 'ctrl+alt+enter', double search on 'alt+enter', 'searchDh() on 'ctrl+enter' and quickSearch() on 'enter'
-    linkQuery.addEventListener('keydown', function (e) {
+    linkQuery.addEventListener('keydown', e => {
 		if (e.ctrlKey && e.altKey && e.keyCode === 13) {
 		e.preventDefault();
 		listSearch();
@@ -35,35 +35,35 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
     });	
 	var linkNc = document.getElementById('linkNc'); // event listener for click of NC button
-    linkNc.addEventListener('click', function() {
+    linkNc.addEventListener('click', () => {
         searchNc();
     });	
 	var linkDh = document.getElementById('linkDh'); // event listener for click of DH button
-    linkDh.addEventListener('click', function() {
+    linkDh.addEventListener('click', () => {
         searchDh();
     });	
 	var linkSsdf = document.getElementById('linkSsdf'); // event listener for click of OMS button
-    linkSsdf.addEventListener('click', function() {
+    linkSsdf.addEventListener('click', () => {
         searchSsdf();
     });
 	var linkContractsId = document.getElementById('linkContractsId'); // event listener for click of contractsId button
-    linkContractsId.addEventListener('click', function() {
+    linkContractsId.addEventListener('click', () => {
         searchContractsId();
     });	
 	var linkContractsData = document.getElementById('linkContractsData'); // event listener for click of go/contracts button
-    linkContractsData.addEventListener('click', function() {
+    linkContractsData.addEventListener('click', () => {
         searchGocontracts();
     });	
 	var linkSalesforce = document.getElementById('linkSalesforce'); // event listener for click of team Salesforce button
-    linkSalesforce.addEventListener('click', function() {
+    linkSalesforce.addEventListener('click', () => {
         searchSf();
     });	
 	var linkDlr = document.getElementById('linkDlr'); // event listener for click of DLR Tree button
-    linkDlr.addEventListener('click', function() {
+    linkDlr.addEventListener('click', () => {
         searchDlr();
     });	
 	var linkTfaGlobal = document.getElementById('linkTfaGlobal'); // event listener for click of TFA Global button
-    linkTfaGlobal.addEventListener('click', function() {
+    linkTfaGlobal.addEventListener('click', () => {
         searchTfaGlobal();
     });
 });
@@ -296,7 +296,7 @@ function listSearch() { // function to search a list of items separated by comma
 	let listArr = queryString.split(/[\s,]+/);  // Split at any whitespace or commas
 	let uniqueArr = listArr.filter((v, i, a) => a.indexOf(v) === i);  // Filtering array to unique values
 	
-	uniqueArr.forEach(function(ncObject) {
+	uniqueArr.forEach(ncObject => {
 		switch(true){
 		case (ncObject == "" || ncObject == "	"): // If whitespace ignore
 			return;
