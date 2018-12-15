@@ -1,0 +1,82 @@
+/* styles for 'Options' page */
+
+.fndSearchTool {
+	text-align: center;
+	background-color: #fff;
+	border-style: solid;
+	border-color: #5f5f5f;
+	border-radius: 8px 12px;
+	border-width: thin medium;
+	font-family: 'Raleway', sans-serif;
+	font-size: 42px;
+	width: 700px;
+	margin: 0 auto;
+	padding: 12px;
+}
+
+.searchTable {
+	display: flex;
+}
+
+.faqItem {	
+	font-family: 'Raleway', sans-serif;
+	border-color: #5f5f5f;
+	border-style: solid;
+	border-radius: 8px 12px;
+	border-width: thin medium;
+}
+
+button {
+	border-style: solid;
+	background: #fff;
+	color: #5f5f5f;
+	border-color: #5f5f5f;
+	font-size: 22px;
+	padding: 8px 0px 8px 0px;
+	margin: 8px;
+	width: 634px;
+	outline-style: none;
+	cursor: pointer;
+}
+
+.quicksearch li {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.infocontainer {
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 650px;
+}
+
+.input {
+	font-weight: bold;
+}
+
+.optionsMenu {
+	font-family: 'Raleway', sans-serif;
+	background-image: radial-gradient(#fff, #b2d4f1, #b2d4f2, #5f5f5f);
+    background-attachment: fixed;
+	font-size: 16px;
+	color: #5f5f5f;
+}
+
+#banana {
+	text-decoration: none;
+	cursor: default;
+}
+
+#reportIssue {
+	text-decoration: none;
+}
+
+#info1, #info2, #info3, #info4, #info5, #info6 {
+	display: none;
+	width: 600px;
+	margin: 0 auto;
+}
+
+#topSpace {height: 85px;}
+#bottomSpace {height: 45px;}
